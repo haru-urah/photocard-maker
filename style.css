@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px; /* 전체 컨테이너 최대 너비 */
+    width: 100%;
+    box-sizing: border-box; /* 패딩 포함 계산 */
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 25px;
+}
+
+.controls {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    cursor: pointer;
+    font-size: 1rem; /* 폰트 크기 조정 */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.canvas-area {
+    margin: 0 auto 25px auto; /* 캔버스 영역 가운데 정렬 */
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: inline-block; /* 캔버스 크기에 맞춰 영역 조절 */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    background-color: #f9f9f9; /* 캔버스 배경과 구분 */
+}
+
+#photocardCanvas {
+    display: block; /* 불필요한 여백 제거 */
+    margin: 0; /* 부모로부터 상속받은 margin 제거 */
+    /* 캔버스 크기는 JavaScript에서 설정되므로, CSS에서는 기본값만 유지 */
+    background-color: #ffffff; /* 캔버스 자체 배경색 */
+}
+
+.stickers {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.sticker-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.sticker-item {
+    width: 80px;
+    height: 80px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    object-fit: contain; /* 이미지 비율 유지 */
+    padding: 5px;
+}
+
+.sticker-item:hover {
+    border-color: #4CAF50;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    input[type="file"], button {
+        width: 100%; /* 모바일에서 버튼 너비 100% */
+        box-sizing: border-box;
+    }
+    .sticker-item {
+        width: 60px;
+        height: 60px;
+    }
+}

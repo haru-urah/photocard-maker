@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포토카드 꾸미기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>나만의 포토카드 꾸미기</h1>
+
+        <div class="controls">
+            <input type="file" id="imageUploader" accept="image/*">
+            <button id="saveImageBtn">포토카드 저장하기</button>
+        </div>
+
+        <div class="canvas-area">
+            <canvas id="photocardCanvas"></canvas>
+        </div>
+
+        <div class="stickers">
+            <h2>스티커 선택</h2>
+            <div class="sticker-list">
+                <img src="stickers/sticker1.png" alt="스티커 1" class="sticker-item" data-sticker-id="sticker1">
+                <img src="stickers/sticker2.png" alt="스티커 2" class="sticker-item" data-sticker-id="sticker2">
+                <img src="stickers/sticker3.png" alt="스티커 3" class="sticker-item" data-sticker-id="sticker3">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
